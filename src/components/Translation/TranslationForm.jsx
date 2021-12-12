@@ -8,14 +8,14 @@ const TranslationForm = ({ onTranslation } ) => {
 
         return (
             <form onSubmit = { handleSubmit(onSubmit) }>
-                <fieldset>
-                    <label htmlFor="translation-notes">Translation notes:</label>
+                <fieldset className="box">
+                    <label htmlFor="translation-letters" className="h4">Input the word you want to translate!</label>
+             
                     <input type= "text" { ...register('translationNotes')} placeholder="Type in letters" />
-                </fieldset>
-                <button type = "submit">Translation</button>
+                <button type = "submit">Translate</button>
+                </fieldset>                   
             </form>
         )
-
     }
 
 

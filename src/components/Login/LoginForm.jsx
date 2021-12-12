@@ -29,7 +29,7 @@ const LoginForm = () => {
     // side effects
     useEffect(() => {
   if (user !== null) {
-      navigate('/profile')
+      navigate('/translations')
     }
 }, [ user, navigate ])
 
@@ -63,19 +63,19 @@ const LoginForm = () => {
 
     return (
         <>
-            <h2>Your name, please!</h2>
+          
             <form onSubmit = { handleSubmit(onSubmit) }>
-                <fieldset>
+                <fieldset className='box'>
+                <h2>Your name, please!</h2>
                     <label htmlFor="username"></label>
                     <input type="text" 
-                        placeholder="johndoe"                    
+                        placeholder="enter you username here"                    
                     { ...register("username", usernameConfig) } />
                 { errorMessage }
-                </fieldset>
-
                 <button type="submit" disabled={ loading }>
-                    Continue
+                    Login
                 </button>
+                </fieldset>           
 
                 { loading && <p> Logging in... </p> }
                 { apiError && <p> { apiError } </p> }

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
 import { translationClearHistory } from "../../api/translation"
 import { STORAGE_KEY_USER } from "../../const/storageKeys"
 import { useUser } from "../../context/UserContext"
@@ -34,11 +34,11 @@ const ProfileActions = () => {
     }
 
     return (
-        <ul>
-            <li><Link to = "/translations">Translations</Link></li>
-            <li><button onClick={ handleClearHistoryClick }>Clear history</button></li>
-            <li><button onClick={ handleLogoutClick  }>Logout</button></li>
-        </ul>
+        <fieldset className="box">
+            <button onClick={ handleClearHistoryClick } >Clear history</button>     
+            <button onClick={ handleLogoutClick  }>Logout</button>            
+        </fieldset>
     )
+  
 }
 export default ProfileActions

@@ -14,6 +14,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
+        
         <Navbar />
         <Routes>
           <Route path="/" element= {< Login />} />

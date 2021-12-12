@@ -1,7 +1,7 @@
 const ProfileHeader = ({ username }) => {
     return (
         <header>
-            <h4>Welcome back { username }!</h4>
+            {/* <h3>Welcome { username }!</h3> */}
         </header>
     )
 }

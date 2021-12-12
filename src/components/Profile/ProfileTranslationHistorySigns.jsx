@@ -1,5 +1,5 @@
 
 const ProfileTranslationHistorySigns = ({ sign  }) => {
-    return <li>{ sign }</li>
+    return <ul>{ sign }</ul>
 }
 export default ProfileTranslationHistorySigns
