@@ -41,16 +41,15 @@ const Translations = () => {
 })
 
     return (
-        <>
+        <div >
     
             <section id="translation-letters" >
                <TranslationForm onTranslation = { handleTranslationButtonClick }/> 
             </section>
-                  <section id = "translation-options" className="h3">
+            <section id = "translation-options" className="box signs">
                 { availableTranslations }
-            </section>
-  
-        </>
+            </section>  
+        </div>
     )
 }
 export default withAuth(Translations)

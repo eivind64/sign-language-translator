@@ -9,17 +9,14 @@ const { user } = useUser()
          <img src={ 'img/hi.png' } alt={ 'hi there' } width ="55" />     
         <nav> 
         { user === null  &&         
-        <span className = "box">The best sign translator in the world!</span>
+        <div >The best sign translator in the world!</div>
 }
         { user !== null  &&     
-            <span className = "box">
-              <span className = "box">The best sign translator in the world!</span>
+            <>
+              <div >The best sign translator in the world!</div>
                    <NavLink to="/translations" ><button type="button">Translations</button></NavLink>
                    <NavLink to="/profile"><button type="button">Translation history {user.username}</button></NavLink> 
-            </span>            
-        }
-        {
-
+            </>       
         }
       </nav>
       </fieldset>
