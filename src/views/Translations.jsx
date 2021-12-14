@@ -17,19 +17,25 @@ const Translations = () => {
         if (!letter) {
             alert('Please insert your text you want to translate')
             return
-        }
+        }  
+        
+        letter = letter.replace(/\s/g, "").toLowerCase();
+              
+        if (/^[a-z]+$/.test(letter)) {
 
-        const [error, updatedUser] = await translationAdd(user, letter)
-        if (error !== null) {
-            return
+            const [error, updatedUser] = await translationAdd(user, letter)
+
+            if (error !== null) {
+                return
+            }
+            storageSave(STORAGE_KEY_USER, updatedUser)
+            setUser(updatedUser) 
+            setTranslations(letter)   
+        }
+        else {
+            alert ('Letters only, please!')
         }
         
-        letter = letter.replace(/\s/g, " ").toLowerCase();
-        console.log("letter: " + letter)
-
-        storageSave(STORAGE_KEY_USER, updatedUser)
-        setUser(updatedUser) 
-        setTranslations(letter)    
      
     }
 

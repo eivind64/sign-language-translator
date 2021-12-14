@@ -1,4 +1,3 @@
-// import { Link } from "react-router-dom"
 import { translationClearHistory } from "../../api/translation"
 import { STORAGE_KEY_USER } from "../../const/storageKeys"
 import { useUser } from "../../context/UserContext"

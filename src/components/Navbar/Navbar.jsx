@@ -5,18 +5,16 @@ const Navbar = () => {
 const { user } = useUser()
 
     return (
-      <fieldset className = "box">
-         <img src={ 'img/hi.png' } alt={ 'hi there' } width ="55" />     
-        <nav> 
-        { user === null  &&         
-        <div >The best sign translator in the world!</div>
-}
+      <fieldset className = "box header-container">
+         <img src={ 'img/hi.png' } alt={ 'hi there' } className="logo" />     
+        <h1 className="payoff">The best sign translator in the world!</h1>
+        <nav>
+
         { user !== null  &&     
-            <>
-              <div >The best sign translator in the world!</div>
+            <div className="navigation-container">
                    <NavLink to="/translations" ><button type="button">Translations</button></NavLink>
                    <NavLink to="/profile"><button type="button">Translation history {user.username}</button></NavLink> 
-            </>       
+            </div>       
         }
       </nav>
       </fieldset>

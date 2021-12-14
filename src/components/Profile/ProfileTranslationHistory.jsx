@@ -9,9 +9,9 @@ let signList = translations.map(
     
 
     return (
-        <section >
+        <section className="box history">
             <h4>Your 10 latest translations:</h4>        
-                { signList }         
+                <ul>{ signList }</ul>
         </section>
     )
 }

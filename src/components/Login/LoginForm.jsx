@@ -69,7 +69,7 @@ const LoginForm = () => {
                 <h2>Your name, please!</h2>
                     <label htmlFor="username"></label>
                     <input type="text" 
-                        placeholder="enter you username here"                    
+                        placeholder="enter your username here"                    
                     { ...register("username", usernameConfig) } />
                 { errorMessage }
                 <button type="submit" disabled={ loading }>

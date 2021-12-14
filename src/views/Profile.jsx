@@ -1,4 +1,4 @@
-import ProfileHeader from "../components/Profile/ProfileHeader"
+
 import ProfileActions from "../components/Profile/ProfileActions"
 import ProfileTranslationHistory from "../components/Profile/ProfileTranslationHistory"
 import withAuth from "../hoc/withAuth"
@@ -26,7 +26,7 @@ const Profile = () => {
     
     return (
         <>
-        <ProfileHeader username={ user.username } />
+      
         <ProfileActions />
         <ProfileTranslationHistory translations = { user.translations } />
         </>
