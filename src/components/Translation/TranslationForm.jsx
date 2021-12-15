@@ -18,5 +18,4 @@ const TranslationForm = ({ onTranslation } ) => {
         )
     }
 
-
 export default TranslationForm

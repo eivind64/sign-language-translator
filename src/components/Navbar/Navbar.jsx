@@ -12,8 +12,8 @@ const { user } = useUser()
 
         { user !== null  &&     
             <div className="navigation-container">
-                   <NavLink to="/translations" ><button type="button">Translations</button></NavLink>
-                   <NavLink to="/profile"><button type="button">Translation history {user.username}</button></NavLink> 
+                   <NavLink to="/translations" ><button type="button">Translation page</button></NavLink>
+                   <NavLink to="/profile"><button type="button">Profile page {user.username}</button></NavLink> 
             </div>       
         }
       </nav>

@@ -1,19 +1,18 @@
 import ProfileTranslationHistorySigns from "./ProfileTranslationHistorySigns"
 
-const ProfileTranslationHistory = ({ translations }) => {
+const ProfileTranslationHistoryWords = ({ translations }) => {
 
-let signList = translations.map(
+let wordsList = translations.map(
     (sign, index) => < ProfileTranslationHistorySigns key = { index + '-' + sign } sign= { sign } />)
-    // const signListLength = signList.length
-    signList = signList.slice(Math.max(signList.length - 10, 0))
+
+    wordsList = wordsList.slice(Math.max(wordsList.length - 10, 0))
     
 
     return (
         <section className="box history">
             <h4>Your 10 latest translations:</h4>        
-                <ul>{ signList }</ul>
+                <ul>{ wordsList }</ul>
         </section>
     )
 }
-export default ProfileTranslationHistory
-
+export default ProfileTranslationHistoryWords

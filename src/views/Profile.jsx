@@ -1,6 +1,6 @@
 
 import ProfileActions from "../components/Profile/ProfileActions"
-import ProfileTranslationHistory from "../components/Profile/ProfileTranslationHistory"
+import ProfileTranslationHistoryWords from "../components/Profile/ProfileTranslationHistoryWords"
 import withAuth from "../hoc/withAuth"
 import { useUser } from "../context/UserContext"
 import { useEffect } from "react"
@@ -28,7 +28,7 @@ const Profile = () => {
         <>
       
         <ProfileActions />
-        <ProfileTranslationHistory translations = { user.translations } />
+        <ProfileTranslationHistoryWords translations = { user.translations } />
         </>
     )
 }
