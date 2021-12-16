@@ -11,7 +11,7 @@ const TranslationForm = ({ onTranslation } ) => {
                 <fieldset className="box">
                     <label htmlFor="translation-letters" className="h4">Input the word you want to translate!</label>
              
-                    <input type= "text" { ...register('translationLetters')} placeholder="Type in letters" />
+                    <input type= "text" { ...register('translationLetters')} maxlength="40" placeholder="Type in max 40 letters"  />
                 <button type = "submit">Translate</button>
                 </fieldset>                   
             </form>
